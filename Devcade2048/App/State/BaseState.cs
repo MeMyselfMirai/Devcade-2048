@@ -242,10 +242,10 @@ public abstract class BaseState {
             image.Height
         );
         Rectangle devcadePos = new(
-            (int) (pos.X * 18 / 7),
-            (int) (pos.Y * 18 / 7),
-            (int) (dim.X * 18 / 7),
-            (int) (dim.Y * 18 / 7)
+            (int) (pos.X * Asset.SCALE),
+            (int) (pos.Y * Asset.SCALE),
+            (int) (dim.X * Asset.SCALE),
+            (int) (dim.Y * Asset.SCALE)
         );
         Pen.Draw(image, devcadePos, color);
 #endif
@@ -274,10 +274,10 @@ public abstract class BaseState {
         Pen.Draw(image, pos, color);
 #else
         Rectangle devcadePos = new(
-            pos.X * 18 / 7,
-            pos.Y * 18 / 7,
-            pos.Width * 18 / 7,
-            pos.Height * 18 / 7
+            pos.X * Asset.SCALE,
+            pos.Y * Asset.SCALE,
+            pos.Width * Asset.SCALE,
+            pos.Height * Asset.SCALE
         );
         Pen.Draw(image, devcadePos, color);
 #endif
@@ -300,8 +300,8 @@ public abstract class BaseState {
         Pen.DrawString(font, data, pos, color);
 #else
         Vector2 actualPos = new(
-            (int) (pos.X * 18.0f / 7.0f),
-            (int) (pos.Y * 18.0f / 7.0f)
+            (int) (pos.X * Asset.SCALE),
+            (int) (pos.Y * Asset.SCALE)
         );
         Pen.DrawString(
             spriteFont: font, 
@@ -310,7 +310,7 @@ public abstract class BaseState {
             color: color, 
             rotation: 0.0f, 
             origin: new(), 
-            scale: 18.0f / 7.0f, 
+            scale: Asset.SCALE, 
             effects: SpriteEffects.None, 
             layerDepth: 0.0f
         );

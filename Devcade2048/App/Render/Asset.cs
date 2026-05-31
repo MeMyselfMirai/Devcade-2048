@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Devcade2048.App.Render;
 
 public static class Asset {
+    public static float SCALE = 1;
+
     public static Texture2D Title;
     public static Texture2D[] Menu = new Texture2D[4];
     public static Texture2D Grid;

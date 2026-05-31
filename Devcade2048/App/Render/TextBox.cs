@@ -9,10 +9,9 @@ public static class TextBox {
 #if DEBUG
         sb.DrawString(font, data, pos, color);
 #else
-        float scale = 18f / 7f;
         Vector2 actualPos = new(
-            (int) (pos.X * scale),
-            (int) (pos.Y * scale)
+            (int) (pos.X * Asset.SCALE),
+            (int) (pos.Y * Asset.SCALE)
         );
         sb.DrawString(
             spriteFont: font, 
@@ -21,7 +20,7 @@ public static class TextBox {
             color: color, 
             rotation: 0.0f, 
             origin: new(), 
-            scale: scale, 
+            scale: Asset.SCALE, 
             effects: SpriteEffects.None, 
             layerDepth: 0.0f
         );

@@ -56,6 +56,7 @@ public class Game1 : Game {
 		_graphics.ApplyChanges();
 #else
 		_graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+		Asset.SCALE = (float) (GraphicsDevice.DisplayMode.Width / 420);
 		_graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
 		_graphics.ApplyChanges();
 #endif
